@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validate() {
+            var form1 = document.getElementById("RegForm");
+            var name = form1.Name.value;
+            var email = form1.Email.value;
+            var phone = form1.Telephone.value;
+            var what = form1.Subject.value;
+            var password = form1.Password.value;
+            var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
+            var regPhone = /^\d{10}$/;
+            if (name == "") {
+                window.alert("please Enter Your Name:");
+                return false;
+            }
+            else if(email == "" || !regEmail.test(email)){
+                window.alert("Please Enter a valid e-mail address.");
+                return false;
+            }
+            else if(password.length < 6){
+                alert("Plaase Enter Your Password:");
+                return false;
+            }
+            else if(phone == "" || !regPhone.test(phone)){
+                alert("Please Enter Valid phone Number:");
+                return false;
+            }
+            else if(what == ""){
+                alert("Please Enter Your Course:");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <form name="RegForm" method="post" id="RegForm" onsubmit="return validate()">
+        <table>
+            <tr>
+                <td colspan="2"><h1 style="text-align: center;">REGISTRATION FORM</h1></td><br><br>
+            </tr>
+            <tr>
+                <td>Name: </td>
+                <td><input type="text" size="40" name="Name" /><br /></td>
+            </tr>
+            <tr>
+                <td>E-mail Adddress:</td>
+                <td><input type="text" size="40" name="Email" /><br></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="text" size="40" name="Password" /><br></td>
+            </tr>
+            <tr>
+                <td>Mobile:</td>
+                <td><input type="text" size="40" name="Telephone" /><br></td>
+            </tr>
+            <tr>
+                <td>Select Your Course:</td>
+                <td><select name="Subject">
+                    <option value="">Select Course</option>
+                    <option>B.Tech</option>
+                    <option>M.Tech</option>
+                    <option>BCA</option>
+                    <option>MCA</option>
+                </select><br></td>
+            </tr><br><br>
+            <tr>
+                <td>Comments:</td>
+                <td><textarea cols="40" name="Comment"></textarea><br><br></td>
+            </tr>
+            <tr>
+                <td>Submit</td>
+                <td><input type="submit" value="Submit" name="Submit" /> &nbsp;<input type="reset" value="Reset" name="Reset" /><br></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
