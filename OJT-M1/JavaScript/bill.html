@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Electricity Bill Calculator</h1>
+    <script>
+        var units = prompt("Enter the number of units consumed:");
+        var billAmount;
+        if (units <= 100){
+            billAmount = units * 0.5;
+        }
+        else if (units <= 200) 
+        {
+            billAmount = 100 * 0.5 + (units -100) * 0.75;
+        }
+        else if (units <= 300) 
+        {
+            billAmount = 100 * 0.5 + 100 * 0.75 + (units - 200 ) * 1.20;
+        }
+        else{
+            billAmount = 100 * 0.5 + 100 * 0.75 + 100 * 1.20 + (units - 300 ) * 1.50;
+        }
+        document.write("The electricity bill is : " + billAmount.toFixed(2));
+    </script>
+</body>
+</html> 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var car = new Array(3);
+        car[0] = "Ford";
+        car[1] = "Toyota";
+        car[2] = "Honda";
+
+        var car2 = new Array("Ford","Toyota", "Honda");
+        var car3 = ["odi", "innova","vagon"];
+        document.write(car2);
+        document.write("<br>");
+
+        car2.push("Yamaha");
+        document.write(car2);
+        document.write("<br>");
+
+        car2.pop();
+        document.write(car2);
+        document.write("<br>");
+
+        var data = car2.concat(car3);
+        document.write(data);
+        document.write("<br>");
+    </script>
+</body>
+</html>

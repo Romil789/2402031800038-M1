@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculate Total Marks</h1>
+    <script>
+        var arr = [];
+        var Total_Marks = 0;
+        for(var i = 0; i < 3 ; i++){
+            var marks = prompt("Enter Subject " + (i+1) + " Marks:" );
+            document.write("Subject" + (i+1) + "marks:"+ marks);
+            document.write("<br>");
+            
+            arr[i] = parseInt(marks);
+            Total_Marks += arr[i];
+        }
+        document.write("Your Total Marks is:" + Total_Marks);
+            
+            
+        
+    </script>
+</body>
+</html>

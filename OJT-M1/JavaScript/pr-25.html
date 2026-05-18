@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="myText">
+    <button onclick="checkMail()">Check</button>
+    <script>
+        function checkMail()
+        {
+            var a = document.getElementById("myText").value;
+            var pattern = "^[\\w-_\.]*[\\w-_\.]\@[\\w]\.+[\\w]+[\\w]$";
+            var regex = new RegExp(pattern);
+            if(regex.test(a))
+            {
+                alert("Valid");
+            }
+            else{
+                alert("Invalid");
+            }
+        }
+    </script>
+</body>
+</html>

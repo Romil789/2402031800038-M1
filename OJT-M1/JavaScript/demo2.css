@@ -1,0 +1,35 @@
+div h1,h3{
+    color: blue;
+    text-align: center;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: lightblue;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+div h4{
+    color: green;
+    text-align: center;
+    font-size: medium;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: lightgreen;
+    text-transform: lowercase;
+    letter-spacing: 5px;
+}
+#box{
+    color: purple;
+    text-align: center;
+    font-size:x-large;
+    font-family: 'Georgia', serif;
+    background-color: lavender;
+}
+.box{
+    width: auto;
+    height: auto;
+    background-color: rgba(255, 0, 0, 0.5);
+    border: 2px solid black;
+    margin: 20px auto;
+    position: relative;
+    left: 50px;
+    top: 100px;
+}
