@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        nav{
+            position: sticky;
+            top: 0;
+            background: #333;
+            padding: 15px;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 30px;
+        }
+        nav a:hover{
+            color: orange;
+        }
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            color: #333;
+        }
+
+        .section-title p {
+            color: #666;
+    }
+
+        .gallery{
+            display :grid;
+            grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+            gap: 100px;
+        }
+
+        .gallery img{
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: 0.3s;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .gallery img:hover{
+            transform:scale(1.03);
+        }
+    </style>
+</head>
+<body>
+    
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+        </nav>
+    
+    <section id="gallery">
+        <div class="section-title">
+            <h2>Gallery</h2>
+            <p>Take a look at our cafe atmosphere</p>
+        </div>
+
+        <div class="gallery">
+            <img src="https://m.media-amazon.com/images/I/71I94YgFeSS._AC_SL1024_.jpg" alt="Gallery">
+            <img src="https://images.squarespace-cdn.com/content/v1/632054385f7b081900697ed2/b88b3350-2848-4448-9b1b-845200fcd0c6/emily_resort_terra_restaurant_09.jpg" alt="Gallery">
+            <img src="https://interiordesign.net/wp-content/uploads/2023/02/Interior-Design-YOD-Group-Terra-Ukraine-idx230101_boy_Hotel_Dining01.jpg" alt="Gallery">
+            <img src="https://restaurants.emilyresort.com.ua/wp-content/uploads/2025/08/hero2-scaled.jpg" alt="Gallery">
+            
+        </div>
+    </section>
+    <footer>
+        <p>© 2026 Urban Bite Cafe | Designed with HTML, CSS & JavaScript</p>
+    </footer>
+</body>
+</html>
