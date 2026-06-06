@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    <style>
+        nav{
+            position: sticky;
+            top: 0;
+            background: #333;
+            padding: 15px;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav a{
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 30px;
+        }
+        nav a:hover{
+            color: orange;
+        }
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title{
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2{
+            font-size: 40px;
+            color: #333;
+        }
+
+        .section-title p{
+            color: #666;
+    }
+        .about{
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            gap: 40px;
+            align-items: center; 
+        }
+        .about img{
+            width: 100%;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <section id="about">
+        <div class="section-title">
+            <h2>About Us</h2>
+            <p>Serving happiness one plate at a time</p>
+            <p></p>
+        </div>
+        <div class="about">
+            <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?q=80&w=1470&auto=format&fit=crop" alt="Cafe">
+
+            <div>
+                <h3>Best Cafe Experience</h3>
+                <p>
+                RD's Cafe is a modern restaurant and coffee house offering freshly brewed coffee,
+                tasty fast food, desserts, and a relaxing atmosphere. We focus on quality ingredients,
+                great taste, and excellent customer service.
+                </p>
+                <br>
+                <p>
+                Whether you're here for breakfast, lunch, dinner, or a quick coffee break,
+                we promise a memorable dining experience.
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
