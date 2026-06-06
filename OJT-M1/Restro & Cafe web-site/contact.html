@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Cafe Delight</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    background: #333;
+    padding: 15px;
+    z-index: 1000;
+    text-align: center;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    margin: 20px;
+    font-size: 30px;
+}
+nav a:hover{
+    color: orange;
+}
+
+body{
+    background:#f8f5f2;
+}
+
+.contact-section{
+    width:100%;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+.contact-container{
+    width:800px;
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+.contact-container h1{
+    text-align:center;
+    color:#6f4e37;
+    margin-bottom:10px;
+}
+
+.contact-container p{
+    text-align:center;
+    margin-bottom:25px;
+    color:#555;
+}
+
+.form-group{
+    margin-bottom:15px;
+}
+
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight:bold;
+}
+
+input,
+textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+textarea{
+    resize:none;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    background:#6f4e37;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#4e342e;
+}
+
+#error{
+    color:red;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+#success{
+    color:green;
+    text-align:center;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+.contact-info{
+    text-align:center;
+    margin-top:25px;
+    color:#444;
+}
+
+@media(max-width:768px){
+    .contact-container{
+        width:100%;
+    }
+}
+</style>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+
+<section class="contact-section">
+    <div class="contact-container">
+
+        <h1>Contact Us</h1>
+        <p>We'd love to hear from you! Send us your questions or feedback.</p>
+
+        <div id="error"></div>
+
+        <form id="contactForm">
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" placeholder="Enter your email">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+
+            <div class="form-group">
+                <label>Your Message</label>
+                <textarea id="message" rows="5" placeholder="Write your message"></textarea>
+            </div>
+
+            <button type="submit">Send Message</button>
+
+        </form>
+
+        <div id="success"></div>
+
+        <div class="contact-info">
+            <h3>RD's Cafe</h3>
+            <p>📍 RD's Cafe & restro, Ahmedabad</p>
+            <p>📞 +91 9835701357</p>
+            <p>✉️ rdscafeandrestro@gmail.com</p>
+        </div>
+
+    </div>
+</section>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    let name = document.getElementById("name").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let phone = document.getElementById("phone").value.trim();
+    let message = document.getElementById("message").value.trim();
+
+    let error = document.getElementById("error");
+    let success = document.getElementById("success");
+
+    error.innerHTML = "";
+    success.innerHTML = "";
+
+    if(name === "" || email === "" || phone === "" || message === ""){
+        error.innerHTML = "Please fill all fields.";
+        return;
+    }
+
+    let emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if(!email.match(emailPattern)){
+        error.innerHTML = "Please enter a valid email address.";
+        return;
+    }
+    alert("Message Send Successfully!")
+
+    document.getElementById("contactForm").reset();
+});
+</script>
+
+</body>
+</html>

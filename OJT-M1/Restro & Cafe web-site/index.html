@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        nav{
+            position: sticky;
+            top: 0;
+            background: #333;
+            padding: 15px;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 30px;
+        }
+        nav a:hover{
+            color: orange;
+        }
+        .logo{
+            color: orange;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        .hero {
+            height: 720px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+            url('https://thermory.com/wp-content/uploads/2022/09/Thermory-Drift-Black-Pearl-Grand-Emily-Hotel-Lobby-in-Ukraine-YOD-Group-Photo-Yevhenii-Avramenko-1920x1280_24.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: top;
+            color: white;
+            padding: 20px;
+            }
+
+        .hero-content h1 {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 25px;display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-content a button{
+            padding: 12px 20px;
+            color:black;
+            background-color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="menu.html">Menu</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+    </nav>
+    <header>
+        <div class="menu-toggle" id="menu-toggle"></div>
+        <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome to RD's Restro & Cafe</h1>
+            <p>Fresh Coffee • Delicious Food • Cozy Atmosphere</p>
+            <a href="menu.html">
+                <button style="align-items: center">View Menu</button>
+            </a>
+        </div>
+    </header>
+    
+</body>
+</html>
