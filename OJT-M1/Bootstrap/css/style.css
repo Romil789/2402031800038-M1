@@ -1,0 +1,32 @@
+.container{
+    border: 8px solid black;
+}
+.row{
+    border: 8px solid red;
+}
+.col,.col-1,.col-2,.col-3,.col-4{
+    border: 8px solid green;
+}
+#header{
+    background: pink;
+    padding: 10px 0 10px 10px
+}
+#menu{
+    background: orangered;
+    padding: 3px 0 10px 10px;
+}
+#menu ul{
+    list-style: none;
+}
+#menu ul li{
+    display:inline-block;
+}
+#content{
+    background: lightgray ;
+}
+#sidebar{
+    background: lightcyan;
+}
+#footer{
+    background: lightsalmon;
+}
